@@ -43,6 +43,7 @@ function Buy() {
           <option value="Bitcoin">Bitcoin</option>
         </select>
         <div className="crypto-amount">
+          
           You'll get : {calculateCryptoAmount()} {currency}
         </div>
         <button className="buy-now" onClick={() => console.log('Buying...')}>Buy Now</button>

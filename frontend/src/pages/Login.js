@@ -22,8 +22,8 @@ function Login() {
             <div className="input-group">
               <input
                 type="text"
-                id="username"
-                placeholder="Username"
+                id="publickey"
+                placeholder="Public Key"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required

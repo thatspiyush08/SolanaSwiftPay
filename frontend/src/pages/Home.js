@@ -19,16 +19,16 @@ function Home() {
         <div className="nav-item">
           <div className="menu-icon" onClick={toggleSidebar}>≡</div>
           <div className="account-info">
-            <div className="account-number">A1</div>
-            <div className="account-name">Account 1</div>
+            <div className="account-number">P1</div>
+            <div className="account-name">Piyush</div>
           </div>
         </div>
         <div className="nav-item warning">⚠ Solana is experiencing network congestion</div>
       </div>
       <div className="content">
         <div className="balance-info">
-          <div className="balance-amount">₹ 0.00</div>
-          <div className="balance-change">+₹ 0.00 (+0.00%)</div>
+          <div className="balance-amount">$ 100.00</div>
+          <div className="balance-change">+$ 0.00 (+0.00%)</div>
         </div>
         <div className="action-buttons">
           <button className="action-btn send">Send</button>

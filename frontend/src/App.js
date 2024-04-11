@@ -9,10 +9,10 @@ import Buy from './pages/Buy';
 function App() {
   return (
     <div>
-      <Buy />
+      {/* <Buy /> */}
       {/* <Send balance={100} /> */}
       {/* <Home /> */}
-      {/* <Login /> */}
+      <Login />
     </div>
   );
 }
