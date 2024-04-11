@@ -1,0 +1,111 @@
+/* Send.css */
+
+.send-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.send-card {
+  background: #232323;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.send-card:hover {
+  transform: translateY(-5px);
+}
+
+.send-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.balance-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.balance-label {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.balance-amount {
+  display: block;
+  color: #50fa7b;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #2d2d2d;
+  color: #fff;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #556ee6;
+}
+
+.send-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to right, #556ee6, #6e85d3);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.send-button:hover {
+  background: linear-gradient(to right, #6e85d3, #7d93e0);
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .send-card {
+    padding: 20px;
+  }
+
+  .balance-amount {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .send-card {
+    width: 90%;
+    padding: 15px;
+  }
+}

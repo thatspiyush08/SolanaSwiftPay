@@ -1,0 +1,307 @@
+/* home.css */
+
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #c0c0c0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 12px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+}
+
+.account-number {
+  font-weight: bold;
+  color: #e6e6e6;
+  background: linear-gradient(to right, #ff7600, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.account-name {
+  font-size: 20px;
+  color: #fff;
+}
+
+.warning {
+  color: #ffa726;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.balance-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.balance-amount {
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.balance-change {
+  font-size: 18px;
+  color: #50fa7b;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.action-btn {
+  background: linear-gradient(145deg, #2c2c2e, #242426);
+  box-shadow: 6px 6px 12px #191919, -6px -6px 12px #29292b;
+  border-radius: 50px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 16px #191919, -8px -8px 16px #29292b;
+}
+
+.currency-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.currency-card {
+  background: #242424;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 3px 3px 6px #191919, -3px -3px 6px #2f2f2f;
+}
+
+.currency-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 10px #191919, -5px -5px 10px #2f2f2f;
+}
+
+.currency-logo {
+  min-width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.currency-details {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.currency-amount {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Responsive tweaks can go here */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-btn:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .warning {
+    padding-top: 10px;
+  }
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-icon:hover {
+  color: #ff9800; /* Color change on hover */
+}
+
+.account-number {
+  font-weight: bold;
+  color: #e6e6e6;
+  margin-right: 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #ff7600, #ff9800); /* Gradient background */
+}
+
+.account-name {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold; /* Make it bold */
+  text-shadow: 2px 2px 4px #000000; /* Text shadow for better readability */
+}
+
+/* Add this at the end of your Home.css */
+.menu-content {
+  background-color: #242424; /* Background color for menu */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: absolute; /* Position it as needed */
+  top: 60px; /* Position below the navbar */
+  left: 20px;
+  width: calc(100% - 40px); /* Adjust width as per requirement */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+/* Menu items style */
+.menu-content div {
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.menu-content div:last-child {
+  border-bottom: none;
+}
+
+.menu-content div:hover {
+  background-color: #333;
+}
+
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #c0c0c0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+}
+
+.account-number {
+  font-weight: bold;
+  color: #e6e6e6;
+  margin-right: 5px;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.account-name {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar-item {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar-item:hover {
+  color: #f1f1f1;
+}
+
+/* Content styles */
+.content {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* Styles to shift the content to the right when sidebar is open */
+.home.shifted .content {
+  margin-left: 250px;
+}

@@ -1,0 +1,89 @@
+.balance-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .balance-display {
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .balance-amount {
+    font-size: 2rem;
+    color: #50fa7b;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    /* background-color: rgba(80, 250, 123, 0.2); */
+  }
+  
+  .transaction-section {
+    background: #1c1c1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+  }
+  
+  .transaction-section input,
+  .transaction-section select {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2a2a2e;
+    color: #c0c0c0;
+    font-size: 1rem;
+  }
+  
+  .transaction-section select {
+    cursor: pointer;
+  }
+  
+  .transaction-section input::placeholder,
+  .transaction-section select {
+    color: #888888;
+  }
+  
+  .transaction-section button {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-image: linear-gradient(145deg, #6e8efb, #a777e3);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-image 0.3s;
+  }
+  
+  .transaction-section button:hover {
+    background-image: linear-gradient(145deg, #6577ea, #9e68d6);
+  }
+  
+  .crypto-amount {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #a1a1a1;
+    background-color: #2a2a2e;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  

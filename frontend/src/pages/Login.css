@@ -1,0 +1,96 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121212; /* A dark grey that's not too harsh on the eyes */
+  }
+  
+  .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1E1E1E; 
+    border-radius: 8px;
+    width: 100%;
+    max-width: 360px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); 
+    padding: 40px;
+  }
+  
+  .login-title {
+    color: #ffffff;
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    width: 100%; 
+    margin-bottom: 24px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #262626; 
+    border: 1px solid #333333; 
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .input-group input::placeholder {
+    color: #888888;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #3C5ECA; /* A bright blue for the focus outline */
+  }
+  
+  .login-button {
+    width: 100%; /* Consistent button sizing */
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3C5ECA; /* A blue that stands out on the dark background */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+    margin-left: 20px;
+  }
+  
+  .login-button:hover, .login-button:focus {
+    background-color: #5369F8; /* Slightly lighter blue on hover/focus */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .login-card {
+      padding: 30px;
+      max-width: 320px;
+    }
+  
+    .login-title {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 20px;
+      max-width: 280px;
+    }
+  
+    .login-title {
+      font-size: 22px;
+    }
+  }
+  
