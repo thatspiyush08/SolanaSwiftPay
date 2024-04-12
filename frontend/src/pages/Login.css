@@ -93,4 +93,30 @@
       font-size: 22px;
     }
   }
-  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .button-group button {
+    flex: 1;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3C5ECA;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+  }
+
+  .button-group button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .button-group button:hover, .button-group button:focus {
+    background-color: #5369F8;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  }

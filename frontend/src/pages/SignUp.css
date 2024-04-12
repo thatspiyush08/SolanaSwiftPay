@@ -1,0 +1,94 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-container {
+    background-color: #232323;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: fit-content;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .signup-form h1 {
+    margin-bottom: 20px;
+  }
+  
+  .signup-form input {
+    width: 250px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); /* Slight white tint */
+    color: white; /* Text color */
+  }
+  
+  /* Style for input placeholders */
+  .signup-form input::placeholder {
+    color: #888888; /* The same greyish placeholder color as in Login.css */
+  }
+  
+  .signup-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Added margin-top for spacing */
+  }
+  
+  .signup-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .password-input {
+    padding-right: 30px; /* Add padding to make room for the icon */
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* The password input and the eye icon are in a wrapper */
+  .password-wrapper {
+    position: relative;
+    width: 250px;
+  }
+  
+  .password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Make room for the eye icon */
+  }
+  
+  .password-wrapper .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  

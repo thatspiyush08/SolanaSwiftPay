@@ -8,6 +8,8 @@ const app = express();
 const port = 8000;
 
 app.use(bodyParser.json());
+const cors = require('cors');
+app.use(cors());
 
 // Solana connection
 const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
@@ -15,20 +17,37 @@ const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
 let wallets = {};
 let coins = {};
 let balance = {};
+let accounts = {};
 
 // Function to create a new wallet
 app.post('/createWallet', async (req, res) => {
+    const {name,number,password}=req.body;
+    if (!name || !number || !password ) {
+        return res.status(400).json({ error: 'Name, number, password  not provided' });
+    }
     const newWallet = new Keypair();
     const publicKeyString = new PublicKey(newWallet.publicKey).toBase58(); // Convert to string for response
     wallets[publicKeyString] = newWallet;
     coins[publicKeyString] = {"solana": 0, "ethereum": 0, "bitcoin": 0, "polygon": 0};
     balance[publicKeyString] = 0;  //  balance  0
-
+    accounts[publicKeyString]={"name":name,"number":number,"password":password};
     res.json({
         message: 'Wallet created successfully',
         publicKey: publicKeyString,
         privateKey: [...newWallet.secretKey]
     });
+});
+
+
+
+app.post("/checkaccount", async (req, res) => {
+    const { publicKey,password } = req.body;
+    if (accounts[publicKey] && accounts[publicKey]["password"] === password) {
+        res.json({ publicKey: publicKey });
+    }
+    else{
+        res.status(400).json("Invalid public key");
+    }
 });
 
 // Function to add money to the wallet

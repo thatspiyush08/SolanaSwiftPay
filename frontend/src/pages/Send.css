@@ -1,4 +1,3 @@
-/* Send.css */
 
 .send-container {
   display: flex;
@@ -8,6 +7,28 @@
   background: #121212;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #2d2d2d;
+  color: #fff;
+  -webkit-appearance: none; /* Disables the default dropdown styling on WebKit browsers */
+  -moz-appearance: none;    /* Disables the default dropdown styling on Firefox browsers */
+  appearance: none;         /* Disables the default dropdown styling */
+  /* Add a background image for a custom dropdown arrow if desired */
+}
+
+.balance-info {
+  text-align: center;
+  margin-bottom: 30px;
+  
+    font-size: 18px;
+    color: #50fa7b;
+    font-weight: bold;
+}
+
 
 .send-card {
   background: #232323;

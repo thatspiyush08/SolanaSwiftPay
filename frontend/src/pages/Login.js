@@ -1,16 +1,40 @@
-// Login.js
+
 
 import React, { useState } from 'react';
+import axios from 'axios';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Authentication logic goes here
-    console.log('Login submitted:', username, password);
+    try {
+      const response = await axios.post('http://localhost:8000/checkaccount', {
+        publicKey: username,
+        password: password
+      });
+
+      if (response.data && response.data.publicKey) {
+        // Assuming that the API directly confirms the existence of the account by returning the public key
+        localStorage.setItem('publicKey', response.data.publicKey);
+        navigate('/Home');
+      } else {
+        // Clear the inputs and show an error
+        setUsername('');
+        setPassword('');
+        setErrorMessage('Invalid password or Key');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      setUsername('');
+      setPassword('');
+      setErrorMessage('Invalid password or Key');
+    }
   };
 
   return (
@@ -33,13 +57,16 @@ function Login() {
               <input
                 type="password"
                 id="password"
-                placeholder="Password"
+                placeholder={errorMessage || "Password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
-            <button type="submit" className="login-button">Log In</button>
+            <div className="button-group">
+              <button type="submit" className="login-button">Log In</button>
+              <button className="login-button" onClick={() => navigate("/")}>Sign Up</button>
+            </div>
           </form>
         </div>
       </div>
