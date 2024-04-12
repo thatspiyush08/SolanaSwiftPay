@@ -8,7 +8,7 @@ const {
     Transaction,
     SystemProgram,
     sendAndConfirmTransaction,
-    clusterApiUrl // Add this line
+    clusterApiUrl 
 } = require('@solana/web3.js');
 
 
@@ -22,6 +22,7 @@ const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
 
 // In-memory wallet storage for demo purposes
 let wallets = {};
+
 
 // Function to create a new wallet
 app.post('/createWallet', async (req, res) => {
@@ -57,6 +58,7 @@ app.post('/addMoney', async (req, res) => {
 });
 
 
+// Function to get wallet balance
 app.post('/getBalance', async (req, res) => {
     try {
         const { publicKey } = req.body;
@@ -66,6 +68,7 @@ app.post('/getBalance', async (req, res) => {
         res.status(500).json({ error: 'Failed to get the balance' });
     }
 });
+
 
 // Function to remove money from the wallet
 app.post('/reduceMoney', async (req, res) => {

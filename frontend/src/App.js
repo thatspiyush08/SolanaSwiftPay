@@ -12,7 +12,7 @@ function App() {
       {/* <Buy /> */}
       {/* <Send balance={100} /> */}
       {/* <Home /> */}
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 }
