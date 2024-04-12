@@ -11,7 +11,7 @@ function App() {
     <div>
       {/* <Buy /> */}
       {/* <Send balance={100} /> */}
-      {/* <Home /> */}
+      <Home />
       {/* <Login /> */}
     </div>
   );
