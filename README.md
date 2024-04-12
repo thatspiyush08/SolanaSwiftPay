@@ -34,10 +34,10 @@ To get started with Solana Shift Pay, follow these steps:
 
 <img src="frontend/src/assets/Home.png" width="800" height="450">
 
-<div style="display: flex;">
-    <img src="frontend/src/assets/Buy.png" width="400" height="400" style="margin-right: 20px;">
-    <img src="frontend/src/assets/Send.png" width="330" height="400">
-</div>
+<img src="frontend/src/assets/Send.png" width="800" height="450">
+
+<img src="frontend/src/assets/Buy.png" width="800" height="450">
+
 
 
 ## Contributing
