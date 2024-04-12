@@ -26,8 +26,8 @@ let wallets = {};
 // Function to create a new wallet
 app.post('/createWallet', async (req, res) => {
     const newWallet = new Keypair();
-    const publicKeyString = new PublicKey(newWallet.publicKey);
-    wallets[publicKeyString] = newWallet;
+    const publicKeyString = new PublicKey(newWallet.publicKey).toBase58(); // Convert to string for response
+    wallets[publicKeyString] = newWallet; // Use string as key in the object
 
     res.json({
         message: 'Wallet created successfully',
@@ -36,7 +36,27 @@ app.post('/createWallet', async (req, res) => {
     });
 });
 
-// Function to get wallet balance
+// Function to add money to the wallet
+app.post('/addMoney', async (req, res) => {
+    try {
+        const { publicKey, amount } = req.body;
+        const wallet = wallets[publicKey];
+        if (!wallet) {
+            return res.status(400).json({ error: 'Wallet not found' });
+        }
+
+        // Ensure publicKey is correctly used as a PublicKey object
+        const publicKeyObj = new PublicKey(publicKey);
+        const fromAirDropSignature = await connection.requestAirdrop(publicKeyObj, amount * LAMPORTS_PER_SOL);
+        await connection.confirmTransaction(fromAirDropSignature);
+        res.json({ message: "Airdrop successful!" });
+    } catch (error) {
+        console.error("Error during airdrop:", error);
+        res.status(500).json({ error: "Error during airdrop: " + error.message });
+    }
+});
+
+
 app.post('/getBalance', async (req, res) => {
     try {
         const { publicKey } = req.body;
@@ -44,25 +64,6 @@ app.post('/getBalance', async (req, res) => {
         res.json({ balance: balance / LAMPORTS_PER_SOL });
     } catch (error) {
         res.status(500).json({ error: 'Failed to get the balance' });
-    }
-});
-
-
-
-// Function to add money to the wallet
-app.post('/addMoney', async (req, res) => {
-    try {
-        const { publicKey, amount } = req.body;
-        const wallet = wallets[publicKey];
-
-        if (!wallet) {
-            return res.status(400).json({ error: 'Wallet not found' });
-        }
-
-        await transferSol(new Keypair(wallet.secretKey), publicKey, amount);
-        res.json({ message: `Added ${amount} SOL to wallet` });
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to add money' });
     }
 });
 
