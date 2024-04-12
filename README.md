@@ -1,4 +1,4 @@
-# Solana Shift Pay
+# Solana Swift Pay
 
 Solana Shift Pay is a web3-based application designed to facilitate international transactions using the Solana blockchain. By leveraging Solana's high-speed and low-cost transaction capabilities, Solana Shift Pay aims to reduce transfer fees and transaction times associated with traditional international payments.
 
