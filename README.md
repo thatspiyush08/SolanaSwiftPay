@@ -4,7 +4,7 @@ Solana Swift Pay is a web3-based application designed to facilitate internationa
 
 ## Features
 
-- **Fast Transactions:** Utilizing Solana's high throughput, transactions are processed quickly, enabling near-instantaneous transfers.
+- **Fast Transactions:** Utilizing Solana's high throughput, transactions are processed quickly, enabling near-instantaneous transfers .
   
 - **Low Transaction Fees:** Solana's low transaction fees make international payments more affordable compared to traditional banking systems.
   
