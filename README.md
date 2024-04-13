@@ -1,6 +1,6 @@
-# Solana Shift Pay
+# Solana Swift Pay
 
-Solana Shift Pay is a web3-based application designed to facilitate international transactions using the Solana blockchain. By leveraging Solana's high-speed and low-cost transaction capabilities, Solana Shift Pay aims to reduce transfer fees and transaction times associated with traditional international payments.
+Solana Swift Pay is a web3-based application designed to facilitate international transactions using the Solana blockchain. By leveraging Solana's high-speed and low-cost transaction capabilities, Solana Swift Pay aims to reduce transfer fees and transaction times associated with traditional international payments.
 
 ## Features
 
@@ -14,11 +14,11 @@ Solana Shift Pay is a web3-based application designed to facilitate internationa
 
 ## Getting Started
 
-To get started with Solana Shift Pay, follow these steps:
+To get started with Solana Swift Pay, follow these steps:
 
 1. **Install Dependencies:** Ensure that you have Node.js and npm installed on your system.
 
-2. **Clone the Repository:** Clone the Solana Shift Pay repository from GitHub:<br/> git clone https://github.com/thatspiyush08/SolanaSwiftPay.git
+2. **Clone the Repository:** Clone the Solana Swift Pay repository from GitHub:<br/> git clone https://github.com/thatspiyush08/SolanaSwiftPay.git
 
 3. **Install Packages:** Navigate to the project directory and install the necessary dependencies:
 
@@ -42,7 +42,7 @@ To get started with Solana Shift Pay, follow these steps:
 
 ## Contributing
 
-Contributions to Solana Shift Pay are welcome! To contribute, follow these steps:
+Contributions to Solana Swift Pay are welcome! To contribute, follow these steps:
 
 1. Fork the repository.
 
