@@ -40,7 +40,7 @@ To get started with Solana Swift Pay, follow these steps:
 
 
 
-## Contributing
+## Wanna Contribute?
 
 Contributions to Solana Swift Pay are welcome! To contribute, follow these steps:
 
@@ -55,7 +55,7 @@ Contributions to Solana Swift Pay are welcome! To contribute, follow these steps
 5. Submit a pull request with a detailed description of your changes.
 
 
-## Acknowledgements
+## Tech Stack
 
 - Solana - for providing a high-performance blockchain platform.
 - Web3.js - for enabling interactions with the Solana blockchain.
