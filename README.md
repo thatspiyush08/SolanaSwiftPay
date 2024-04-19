@@ -1,5 +1,6 @@
 # Solana Swift Pay
 description+demo video-> https://drive.google.com/drive/u/0/folders/1cxSnYGnK4ebhtQ48iTsp3q76TSZareQQ
+pitch ppt->https://docs.google.com/presentation/d/1ynoiLsqONn1zLV6am9GSJO6yOocbtkfe1YoSQP4cjlA/edit?usp=sharing
 
 Solana Swift Pay is a web3-based application designed to facilitate international transactions using the Solana blockchain. By leveraging Solana's high-speed and low-cost transaction capabilities, Solana Swift Pay aims to reduce transfer fees and transaction times associated with traditional international payments.
 
